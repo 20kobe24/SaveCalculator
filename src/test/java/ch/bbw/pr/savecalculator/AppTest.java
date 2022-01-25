@@ -50,6 +50,10 @@ public class AppTest
         SaveCalculator testee = new SaveCalculator();
         assertTrue(testee.summe(value1, value2) == -2147483648);
     }
+    
+    protected int pow(int value, int powValue) {
+        return (int) Math.pow(value, powValue);
+    }
      
 
     // @Test
