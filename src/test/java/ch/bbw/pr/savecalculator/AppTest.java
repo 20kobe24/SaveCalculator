@@ -14,8 +14,20 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
+    @Before
+    public void setup() {
+        SaveCalculator testee = new SaveCalculator();
+        testee = new SaveCalculator();
     }
 
+    @After
+    public void deleteSetup() {
+        int value1 = 2;
+        int value2 = 2;
+        SaveCalculator testee = new SaveCalculator();
+        testee.summe(value1, value2);
+    }
+   
     @Test
     public void testSummeZweiNegativeIsOk() {
         int value1 = -150;
@@ -31,9 +43,11 @@ public class AppTest
         SaveCalculator testee = new SaveCalculator();
         assertTrue(testee.summe(value1, value2) == 300);
     }
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+     
+
+    // @Test
+    // public void shouldAnswerWithTrue()
+    // {
+    //     assertTrue( true );
+    // }
 }
