@@ -43,6 +43,13 @@ public class AppTest
         SaveCalculator testee = new SaveCalculator();
         assertTrue(testee.summe(value1, value2) == 300);
     }
+    @Test(expected = ArithmeticException.class)
+    public void testSummeGrösstePositiveUndKleinstePositiveMethodenIstOK() {
+        int value1 = Integer.MAX_VALUE;
+        int value2 = 1;
+        SaveCalculator testee = new SaveCalculator();
+        assertTrue(testee.summe(value1, value2) == -2147483648);
+    }
      
 
     // @Test
