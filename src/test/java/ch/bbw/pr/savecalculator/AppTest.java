@@ -87,7 +87,7 @@ public class AppTest
         int value1 = -150;
         int value2 = -200;
         SaveCalculator testee = new SaveCalculator();
-        assertTrue(testee.summe(value1, value2) == -250);
+        assertTrue(testee.summe(value1, value2) == -350);
     }
 
     @Test
@@ -208,7 +208,7 @@ public class AppTest
         int value1 = 200;
         int value2 = -4;
         SaveCalculator testee = new SaveCalculator();
-        assertTrue(testee.divide(value1, value2) == -25);
+        assertTrue(testee.divide(value1, value2) == -50);
     }
 
     @Test(expected = ArithmeticException.class)
@@ -260,11 +260,11 @@ public class AppTest
     }
 
     @Test
-    public void Multiplikationpostivezahlnegativezahlis() {
+    public void MultiplikationpostivezahlnegativezahlisOk() {
         int value1 = 50;
         int value2 = -2;
         SaveCalculator testee = new SaveCalculator();
-        assertTrue(testee.multiply(value1, value2) == -25);
+        assertTrue(testee.multiply(value1, value2) == -100);
     }
 
     @Test
