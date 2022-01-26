@@ -1,12 +1,10 @@
 package ch.bbw.pr.savecalculator;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+
 
 /**
  * Unit test for simple App.
@@ -313,6 +311,38 @@ public class AppTest
         int value2 = 1;
         SaveCalculator testee = new SaveCalculator();
         assertTrue(testee.multiply(value1, value2) == -2147483648);
+    }
+    
+    @Test
+    public void MultiplikationNegativezahlnndnullisok() {
+        int value1 = -11;
+        int value2 = 0;
+        SaveCalculator testee = new SaveCalculator();
+        assertTrue(testee.multiply(value1, value2) == 0);
+    }
+    
+    @Test
+    public void MultiplikationPositivezahlnndnullisok() {
+        int value1 = 14;
+        int value2 = 0;
+        SaveCalculator testee = new SaveCalculator();
+        assertTrue(testee.multiply(value1, value2) == 0);
+    }
+    
+    @Test
+    public void MultiplikationPostivezahlnegativezahlisOk() {
+        int value1 = 200;
+        int value2 = -5;
+        SaveCalculator testee = new SaveCalculator();
+        assertTrue(testee.multiply(value1, value2) == -40);
+    }
+
+    @Test
+    public void MultiplikationVonnegativezahlisok() {
+        int value1 = -25;
+        int value2 = -4;
+        SaveCalculator testee = new SaveCalculator();
+        assertTrue(testee.multiply(value1, value2) == 100);
     }
     
     
