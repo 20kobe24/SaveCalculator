@@ -117,7 +117,7 @@ public class AppTest
         int value1 = Integer.MIN_VALUE;
         int value2 = 1;
         SaveCalculator testee = new SaveCalculator();
-        assertTrue(testee.summe(value1, value2) == -2147483648);
+        assertTrue(testee.summe(value1, value2) == -2147483647);
     }
 
     @Test
@@ -334,7 +334,7 @@ public class AppTest
         int value1 = 200;
         int value2 = -5;
         SaveCalculator testee = new SaveCalculator();
-        assertTrue(testee.multiply(value1, value2) == -40);
+        assertTrue(testee.multiply(value1, value2) == -1000);
     }
 
     @Test
