@@ -71,6 +71,7 @@ public class SaveCalculator {
 	public int modulo(int a, int b) {
 		return a % b;
 	}
+	//Zusatzaufgabe
 
 	public String decToBinary(int decNumber) {
 		return Integer.toBinaryString(decNumber);
